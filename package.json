@@ -1,0 +1,30 @@
+{
+  "name": "just-add",
+  "version": "0.0.0",
+  "description": "Replace random faces in a photo with other faces",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kennib/just-add.git"
+  },
+  "keywords": [
+    "photos",
+    "facial",
+    "recognition",
+    "images"
+  ],
+  "author": "Kenni Bawden",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kennib/just-add/issues"
+  },
+  "homepage": "https://github.com/kennib/just-add#readme",
+  "dependencies": {
+    "faces": "0.0.3",
+    "opencv": "^4.0.0",
+    "prompt": "^0.2.14"
+  }
+}
