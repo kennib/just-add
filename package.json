@@ -1,6 +1,6 @@
 {
   "name": "just-add",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Replace random faces in a photo with other faces",
   "main": "index.js",
   "scripts": {
