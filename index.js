@@ -3,7 +3,10 @@ var fs = require('fs');
 var exec = require('child_process').execSync;
 
 function composition(face) {
-	return ['composite', '-geometry', face.width+'x'+face.height+'+'+face.x+'+'+face.y];
+	var size = 1.6;
+	var width = size * face.width;
+	var height = size * face.height;
+	return ['composite', '-geometry', width+'x'+height+'+'+(face.x)+'+'+(face.y - face.height/4)];
 }
 
 var photo = process.argv[2];
