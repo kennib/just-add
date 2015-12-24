@@ -8,14 +8,17 @@ function composition(face) {
 	return ['composite', '-geometry', width+'x'+height+'+'+(face.x)+'+'+(face.y - face.height/4)];
 }
 
-function justAdd(photo, out, addFaces) {
+function justAdd(photo, out, addFaces, callback) {
 	cv.readImage(photo, function(err, image) {
 		image.detectObject(cv.FACE_CASCADE, {}, function(err, faces) {
 			image.save(out);
-			faces.forEach(function(face) {
-				var addFace = addFaces[Math.floor(Math.random() * addFaces.length)];
-				exec(composition(face).concat([addFace, out, out]).join(' '));
-			});
+			if (faces) {
+				faces.forEach(function(face) {
+					var addFace = addFaces[Math.floor(Math.random() * addFaces.length)];
+					exec(composition(face).concat([addFace, out, out]).join(' '));
+				});
+			}
+			callback();
 		});
 	});
 }

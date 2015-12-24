@@ -23,8 +23,10 @@
   },
   "homepage": "https://github.com/kennib/just-add#readme",
   "dependencies": {
+    "connect-busboy": "0.0.2",
+    "express": "^4.13.3",
     "faces": "0.0.3",
     "opencv": "^4.0.0",
-    "prompt": "^0.2.14"
+    "unique-filename": "^1.1.0"
   }
 }
