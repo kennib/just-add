@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Just add</title>
+  </head>
+  <body>
+    <h1>Just add</h1>
+	<form method="POST" enctype='multipart/form-data'>
+		<label>
+		  Upload your photo
+		  <input type="file" name="photo" accept="image/*">
+		</label>
+	</form>
+	<script>
+		// Submit the form when a photo is added
+		var photoInput = document.querySelector('input[name=photo]');
+		photoInput.onchange = function() {
+			photoInput.form.submit();
+		}
+	</script>
+  </body>
+</html>
