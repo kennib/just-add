@@ -2,14 +2,20 @@
 <html>
   <head>
     <title>Just add</title>
+    <link rel="stylesheet" type="text/css" href="static/css/just-add.css"></link>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <h1>Just add</h1>
 	<form method="POST" enctype='multipart/form-data'>
-		<label>
+		<label class="upload">
 		  Upload your photo
-		  <input type="file" name="photo" accept="image/*">
+		  <input type="file" name="photo" accept="image/*" class="image-upload">
 		</label>
+		<div>
+			Just click the button above and choose your image.
+			It may take a little while to load, so be patient!
+		</div>
 	</form>
 	<script>
 		// Submit the form when a photo is added

@@ -12,6 +12,7 @@ var addFaces = process.argv.slice(4);
 console.log('Server started on port '+port);
 
 var app = express();
+app.use('/static', express.static('static'));
 app.use(busboy());
 
 app.get('/', function(req, res) {

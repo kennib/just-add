@@ -1,0 +1,79 @@
+body {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+
+  background-color: #00b027;
+  color: #fafafa;
+}
+
+/* Animations */
+@keyframes flip {
+    from {transform: rotateX(90deg);}
+    to {transform: rotateX(0deg);}
+}
+
+/* The upload button */
+.upload {
+  display: inline-block;
+  cursor: pointer;
+  margin: 5px;
+  padding: 15px;
+  
+  font-size: 20px;
+  
+  color: #555;
+  background-color: #fafafa;
+  border-bottom: 5px solid #ccc;
+  border-right: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.upload:hover {
+  margin-top: 9px;
+  
+  background-color: white;
+  border-bottom: 1px solid #ccc;
+}
+
+.upload:active {
+  margin-top: 7px;
+
+  border-top: 2px solid #ccc;
+}
+
+  /* The hidden file input element */
+  .image-upload {
+    display: none;
+  }
+
+/* The mosaic container */
+.mosaic {
+  display: block;
+  margin: auto;
+}
+  
+  .mosaic div {
+    display: inline-block;
+
+    line-height: 0px;
+    background-repeat: no-repeat;
+  }
+
+  .mosaic .placeholder,
+  .mosaic .error {
+    display: inline-block;
+    padding: 100px;
+
+    background-color: rgba(0,0,0, 0.3);
+  }
+  .mosaic .row {
+    display: inline-block;
+    margin: 0px auto;
+    
+    line-height: 0px;
+    white-space: nowrap;
+
+    transform-origin: 0% 0%;
+    transform: rotateX(0deg);
+    animation: flip 0.7s;
+  }
