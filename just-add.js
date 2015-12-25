@@ -8,10 +8,14 @@ function composition(face) {
 	return ['composite', '-geometry', width+'x'+height+'+'+(face.x)+'+'+(face.y - face.height/4)];
 }
 
+function shrink(inImage, outImage) {
+	return ['convert', inImage, '-resize', '1000x1000\\>', outImage];
+}
+
 function justAdd(photo, out, addFaces, callback) {
-	cv.readImage(photo, function(err, image) {
+	exec(shrink(photo, out).join(' '));
+	cv.readImage(out, function(err, image) {
 		image.detectObject(cv.FACE_CASCADE, {}, function(err, faces) {
-			image.save(out);
 			if (faces) {
 				faces.forEach(function(face) {
 					var addFace = addFaces[Math.floor(Math.random() * addFaces.length)];
